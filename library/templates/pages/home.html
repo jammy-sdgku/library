@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home - Inventory Management System{% endblock title %}
+
+{% block content %}
+<div class="home_container">
+    <div class="home_img">
+        <img src="{% static 'img/library.jpg' %}" alt="Library Image" />
+    </div>
+    <div class="home_text">
+        <h1>Inventory <br> Management System</h1>
+        <p>Developed by: James Jones</p>
+    </div>
+</div>
+{% endblock content %}  

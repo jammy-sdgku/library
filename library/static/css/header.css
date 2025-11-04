@@ -1,0 +1,45 @@
+.inventory-header {
+    background-color: var(--primary-color);
+    height: 60px;
+    position: sticky;
+    top: 0px;
+}
+
+.inventory-header .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inventory-nav {
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link {
+    height: 100%;
+}
+
+nav.inventory-nav a,
+.nav-link a {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 0 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+}
+
+nav.inventory-nav a:hover {
+    border-bottom: solid 2px white;
+}

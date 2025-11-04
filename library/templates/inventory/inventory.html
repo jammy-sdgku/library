@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Inventory - Inventory Management System{% endblock title %}
+{% load static %}
+
+{% block content %}
+
+<section class ="inventory-section container">
+    <div class="inventory-description-container center-column">
+        <h1>Inventory Management System</h1>
+        <p>Welcome to the Inventory Management System. Here you can manage your book inventory by adding, editing, or deleting book entries. Use the table below to view the current inventory of books.</p>
+        <a href="{% url 'add' %}" class="btn btn-primary mb-3">Add New Book</a>
+    </div>  
+    <div class="inventory-table-container center-column">
+        <table class = "table">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Price</th>
+                    <th scope="col" colspan="2">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in book_list %}
+                <tr>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.year }}</td>
+                    <td>${{ book.price }}</td>
+                    <td><a href="{% url 'edit' book.id %}" class="btn btn-secondary">Edit</a></td>
+                    <td><a href="{% url 'delete' book.id %}" class="btn btn-danger">Delete</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock content %}

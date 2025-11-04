@@ -1,0 +1,37 @@
+{
+        % extends "base.html" %
+    }
+
+    .home_container {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        padding: 20px;
+        align-items: center;
+    }
+
+    .home_img {
+        display: flex;
+        flex: 0 0 50%;
+    }
+
+    .home_img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .home_text {
+        display: block;
+        flex: 0 0 50%;
+    }
+
+    .home_text h1 {
+        font-size: 2em;
+        margin-top: 20px;
+    }
+
+    .home_text p {
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
